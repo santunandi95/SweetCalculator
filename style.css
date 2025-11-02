@@ -1,0 +1,157 @@
+:root {
+  --bg-light: linear-gradient(135deg, #f9c5d1, #f6e7f7);
+  --calc-bg: white;
+  --btn-bg: #ffe6f2;
+  --btn-hover: #ffcce1;
+  --operator-bg: #d6b3ff;
+  --operator-hover: #b48aff;
+  --equal-bg: #90e0ef;
+  --equal-hover: #48cae4;
+  --clear-bg: #ffb3b3;
+  --clear-hover: #ff8080;
+  --text-color: #555;
+  --title-color: #d63384;
+}
+
+body.dark {
+  --bg-light: linear-gradient(135deg, #2e2b4f, #1a1a2e);
+  --calc-bg: #22223b;
+  --btn-bg: #39375b;
+  --btn-hover: #4a4e69;
+  --operator-bg: #7b2cbf;
+  --operator-hover: #9d4edd;
+  --equal-bg: #00b4d8;
+  --equal-hover: #0077b6;
+  --clear-bg: #ef476f;
+  --clear-hover: #d90429;
+  --text-color: #fff;
+  --title-color: #fcbf49;
+}
+
+body {
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.5s ease;
+}
+
+/* Calculator Container */
+.calculator {
+  background: var(--calc-bg);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 320px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.calculator:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  color: var(--title-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  text-align: right;
+  padding-right: 15px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  outline: none;
+}
+
+/* Buttons Layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  background: var(--btn-bg);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+.operator {
+  background: var(--operator-bg);
+  color: white;
+}
+
+.operator:hover {
+  background: var(--operator-hover);
+}
+
+.equal {
+  background: var(--equal-bg);
+  color: white;
+  grid-column: span 2;
+}
+
+.equal:hover {
+  background: var(--equal-hover);
+}
+
+.clear {
+  background: var(--clear-bg);
+  color: white;
+}
+
+.clear:hover {
+  background: var(--clear-hover);
+}
+
+/* Toggle Button */
+.toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--calc-bg);
+  border-radius: 20px;
+  width: 55px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.toggle-ball {
+  width: 20px;
+  height: 20px;
+  background: var(--title-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+body.dark .toggle-ball {
+  transform: translateX(28px);
+}
