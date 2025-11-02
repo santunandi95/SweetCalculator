@@ -20,3 +20,5 @@ This is a part of my lovable mini-project series, combining creativity with clea
 | **CSS3** | Styling and animations |
 | **JavaScript (ES6)** | Functionality and interactions |
 
+How to Run
+Clone this repository : https://santunandi95.github.io/SweetCalculator/
