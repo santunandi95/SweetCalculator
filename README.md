@@ -30,4 +30,4 @@ This is a part of my lovable mini-project series, combining creativity with clea
 
 1. **Clone this repository**:
    ```bash
-   [git clone https://github.com/your-username/SweetCalculator.git](https://santunandi95.github.io/SweetCalculator/)
+   [[git clone https://github.com/your-username/SweetCalculator.git](https://santunandi95.github.io/SweetCalculator/](https://santunandi95.github.io/SweetCalculator/))
